@@ -5,10 +5,11 @@ import { store } from './store/store'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faEnvelope,faLock } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faLock, } from '@fortawesome/free-solid-svg-icons'
+import { faLine, faFacebookSquare, faGooglePlusSquare } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-library.add(faEnvelope,faLock)
+library.add(faEnvelope, faLock, faLine, faFacebookSquare, faGooglePlusSquare)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 // Install BootstrapVue
 Vue.use(BootstrapVue)

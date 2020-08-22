@@ -6,9 +6,16 @@
       <div class="m-4"></div>
       <div class="container p-4">
         <!-- 三種登入方式 -->
-        <b-button squared variant="outline-success" class="mb-2 shadow bg-whit">使用 LINE 登入</b-button>
-        <b-button squared variant="outline-primary" class="mb-2 shadow bg-whit">使用 Facebook 登入</b-button>
-        <b-button squared variant="outline-secondary" class="mb-2 shadow bg-whit">使用 Google 登入</b-button>
+
+        <b-button squared variant="outline-success" class="mb-2 shadow bg-whit">
+          <font-awesome-icon :icon="['fab', 'line']" class="brand-icon mx-1" />使用 LINE 登入
+        </b-button>
+        <b-button squared variant="outline-primary" class="mb-2 shadow bg-whit">
+          <font-awesome-icon :icon="['fab', 'facebook-square']" class="brand-icon mx-1" />使用 Facebook 登入
+        </b-button>
+        <b-button squared variant="outline-secondary" class="mb-2 shadow bg-whit">
+          <font-awesome-icon :icon="['fab', 'google-plus-square']" class="brand-icon mx-1" />使用 Google 登入
+        </b-button>
         <!-- 間隔 -->
         <div class="login-method-separator">或</div>
         <hr class="mx-4" />
@@ -70,6 +77,10 @@ export default {
   width: 100%;
   font-size: 14px;
   font-weight: bold;
+}
+
+.brand-icon {
+  font-size: 20px;
 }
 
 .login-method-separator {
