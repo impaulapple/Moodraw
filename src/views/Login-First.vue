@@ -81,6 +81,7 @@ export default {
 
 .brand-icon {
   font-size: 20px;
+  vertical-align: text-top;
 }
 
 .login-method-separator {
