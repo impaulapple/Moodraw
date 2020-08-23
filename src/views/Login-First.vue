@@ -41,7 +41,7 @@
         <!-- 忘記密碼、註冊帳號 -->
         <div class="row justify-content-md-center">
           <div class="mx-auto">
-            <a href="./" class="px-1">忘記密碼?</a>
+            <a href="./about" class="px-1">忘記密碼?</a>
             <a href="./" class="px-1">註冊帳號</a>
           </div>
         </div>

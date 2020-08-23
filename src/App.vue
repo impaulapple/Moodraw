@@ -1,8 +1,9 @@
 
 <template>
   <div id="app">
-    
-    <router-view></router-view>
+    <transition name="fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -18,6 +19,10 @@ export default {
 </script>
 
 <style>
+#app {
+  overflow: hidden;
+  width: 100vw;
+}
 .p-color-dark {
   background: #357449;
 }
@@ -36,5 +41,15 @@ export default {
 
 .s-color {
   background: #8d6e63;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateX(2em);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.3s ease;
 }
 </style>
