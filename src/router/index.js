@@ -9,14 +9,14 @@ export default new VueRouter({
   linkActiveClass: "active-class",
   routes: [
     {
-      path: '/',
-      name: 'Home',
+      path: '/loginFirst',
+      name: 'loginFirst',
       component: LoginFirst,
       props: true
     },
     {
-      path: '/about',
-      name: 'About',
+      path: '/loginMain',
+      name: 'loginMain',
       props: true,
       component: () => import('../views/Login-Main.vue')
     },

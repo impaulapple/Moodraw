@@ -22,6 +22,7 @@ export default {
 #app {
   overflow: hidden;
   width: 100vw;
+  height: 100%;
 }
 .p-color-dark {
   background: #357449;
