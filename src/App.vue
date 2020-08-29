@@ -23,6 +23,7 @@ export default {
   overflow: hidden;
   width: 100vw;
   height: 100%;
+  font-size: 12px;
 }
 .p-color-dark {
   background: #357449;

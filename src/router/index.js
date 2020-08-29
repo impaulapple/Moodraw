@@ -1,15 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import LoginFirst from '../views/Login-First.vue'
+import LoginFirst from '../views/LoginFirst.vue'
 
 Vue.use(VueRouter)
-
-export default new VueRouter({
+const router = new VueRouter({
   mode: "history",
   linkActiveClass: "active-class",
   routes: [
     {
-      path: '/loginFirst',
+      path: '/',
       name: 'loginFirst',
       component: LoginFirst,
       props: true
@@ -18,7 +17,13 @@ export default new VueRouter({
       path: '/loginMain',
       name: 'loginMain',
       props: true,
-      component: () => import('../views/Login-Main.vue')
+      component: () => import('../views/LoginMain.vue')
+    },
+    {
+      path: '/loginPolicy',
+      name: 'loginPolicy',
+      props: true,
+      component: () => import('../views/LoginPolicy.vue')
     },
     {
       path: '/test',
@@ -28,4 +33,7 @@ export default new VueRouter({
     }
   ]
 })
+// router.replace({ path: '*', redirect: '/' })
+
+export default router
 

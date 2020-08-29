@@ -5,10 +5,10 @@
     <div style="height:80px;"></div>
 
     <div class="container px-5">
-      <b-button squared class="mb-4 w-100 btn btn-brown shadow">登入帳號</b-button>
+      <b-button href="./loginMain" squared class="mb-4 w-100 btn btn-brown shadow">登入帳號</b-button>
       <b-button squared class="mb-4 w-100 btn btn-brown shadow">註冊帳號</b-button>
     </div>
-    <a href="./loginMain" class="d-block text-center mt-auto mb-4">訪客瀏覽</a>
+    <a class="d-block text-center mt-auto mb-4">訪客瀏覽</a>
   </div>
 </template>
 

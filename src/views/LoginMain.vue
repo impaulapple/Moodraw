@@ -1,19 +1,19 @@
 <template>
-  <div id="app" class="w-100 h-100">
+  <div id="app" style="display:flex;flex-direction: column;" class="w-100 h-100">
     <Header></Header>
-    <div style="display:flex;flex-direction: column;" class="h-100">
+    <div style="flex:1 1 auto;">
       <!-- 上面的控白 -->
-      <div class="m-4"></div>
+      <div style="height:50px;"></div>
       <div class="container p-4">
         <!-- 三種登入方式 -->
 
-        <b-button squared variant="outline-success" class="mb-2 shadow bg-whit">
+        <b-button squared variant="outline-success" class="mb-2 shadow bg-whit py-3">
           <font-awesome-icon :icon="['fab', 'line']" class="brand-icon mx-1" />使用 LINE 登入
         </b-button>
-        <b-button squared variant="outline-primary" class="mb-2 shadow bg-whit">
+        <b-button squared variant="outline-primary" class="mb-2 shadow bg-whit py-3">
           <font-awesome-icon :icon="['fab', 'facebook-square']" class="brand-icon mx-1" />使用 Facebook 登入
         </b-button>
-        <b-button squared variant="outline-secondary" class="mb-2 shadow bg-whit">
+        <b-button squared variant="outline-secondary" class="mb-2 shadow bg-whit py-3">
           <font-awesome-icon :icon="['fab', 'google-plus-square']" class="brand-icon mx-1" />使用 Google 登入
         </b-button>
         <!-- 間隔 -->
@@ -35,7 +35,7 @@
         </b-input-group>
 
         <div class="row justify-content-md-center">
-          <b-button squared variant="success" class="mx-auto mb-2 shadow bg-whit w-50">登入</b-button>
+          <b-button squared variant="success" class="mx-auto mb-2 shadow bg-whit w-50 py-2">登入</b-button>
         </div>
 
         <!-- 忘記密碼、註冊帳號 -->
@@ -45,14 +45,15 @@
             <a href="./" class="px-1">註冊帳號</a>
           </div>
         </div>
-        <!-- 下面空白 -->
-        <div class="m-3"></div>
+      </div>
 
-        <div class="row justify-content-md-center">
-          <div class="mx-auto">
-            註冊即代表同意遵守
-            <a href="./loginFirst">使用者條款</a>
-          </div>
+      <!-- 下面空白 -->
+      <div class="m-3"></div>
+
+      <div class="row justify-content-md-center">
+        <div class="mx-auto">
+          註冊即代表同意遵守
+          <a href="./loginPolicy">使用者條款</a>
         </div>
       </div>
     </div>
