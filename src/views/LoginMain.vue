@@ -1,59 +1,62 @@
 <template>
   <div id="app" style="display:flex;flex-direction: column;" class="w-100 h-100">
-    <Header></Header>
     <div style="flex:1 1 auto;">
       <!-- 上面的控白 -->
-      <div style="height:50px;"></div>
+      <b-img style="width: 100%;" center v-bind="mainProps" :src="getLoginTop()" alt="Moodraw Logo"></b-img>
       <div class="container p-4">
-        <!-- 三種登入方式 -->
+        <b-form-input
+          style="margin: auto;"
+          id="txt-mail"
+          type="email"
+          class="my-3"
+          required
+          placeholder="YOUR EMAIL"
+        ></b-form-input>
+        <b-form-input
+          style="margin: auto;"
+          id="txt-pwd"
+          type="password"
+          class="my-3"
+          required
+          placeholder="PASSWORD"
+        ></b-form-input>
 
-        <b-button squared variant="outline-success" class="mb-2 shadow bg-whit py-3">
-          <font-awesome-icon :icon="['fab', 'line']" class="brand-icon mx-1" />使用 LINE 登入
-        </b-button>
-        <b-button squared variant="outline-primary" class="mb-2 shadow bg-whit py-3">
-          <font-awesome-icon :icon="['fab', 'facebook-square']" class="brand-icon mx-1" />使用 Facebook 登入
-        </b-button>
-        <b-button squared variant="outline-secondary" class="mb-2 shadow bg-whit py-3">
-          <font-awesome-icon :icon="['fab', 'google-plus-square']" class="brand-icon mx-1" />使用 Google 登入
-        </b-button>
-        <!-- 間隔 -->
-        <div class="login-method-separator">或</div>
-        <hr class="mx-4" />
-        <!-- 帳號 -->
-        <b-input-group squared class="mb-2 shadow bg-whit">
-          <b-input-group-prepend is-text>
-            <font-awesome-icon icon="envelope" />
-          </b-input-group-prepend>
-          <b-form-input></b-form-input>
-        </b-input-group>
-        <!-- 密碼 -->
-        <b-input-group squared class="mb-2 shadow bg-whit">
-          <b-input-group-prepend is-text>
-            <font-awesome-icon icon="lock" />
-          </b-input-group-prepend>
-          <b-form-input></b-form-input>
-        </b-input-group>
-
-        <div class="row justify-content-md-center">
-          <b-button squared variant="success" class="mx-auto mb-2 shadow bg-whit w-50 py-2">登入</b-button>
+        <div style="position: relative;height:50px;">
+          <div class="login-method-separator"></div>
+          <b-button variant="outline-secondary" class="text-white btn-login">Login</b-button>
         </div>
 
-        <!-- 忘記密碼、註冊帳號 -->
-        <div class="row justify-content-md-center">
-          <div class="mx-auto">
-            <a href="./about" class="px-1">忘記密碼?</a>
-            <a href="./" class="px-1">註冊帳號</a>
-          </div>
-        </div>
+        <b-row class="text-center">
+          <b-col>
+            <b-button style="float:right;" class="btn-brand">
+              <font-awesome-icon :icon="['fab', 'line']" class="brand-icon mx-1" />
+            </b-button>
+          </b-col>
+          <b-col>
+            <b-button class="btn-brand">
+              <font-awesome-icon :icon="['fab', 'google-plus-square']" class="brand-icon mx-1" />
+            </b-button>
+          </b-col>
+          <b-col>
+            <b-button style="float:left;" class="btn-brand">
+              <font-awesome-icon :icon="['fab', 'facebook-square']" class="brand-icon mx-1" />
+            </b-button>
+          </b-col>
+        </b-row>
+
+        <div class="text-center mt-4 txt-sign-up txt-orange">SIGN UP</div>
+
+        <div class="text-center my-2 txt-guest">Browse as Guest</div>
       </div>
 
-      <!-- 下面空白 -->
       <div class="m-3"></div>
 
       <div class="row justify-content-md-center">
         <div class="mx-auto">
-          註冊即代表同意遵守
-          <a href="./loginPolicy">使用者條款</a>
+          By continuing you agree to our
+          <a href="./loginPolicy" class="txt-orange">Terms</a>
+          &
+          <a href="./loginPolicy" class="txt-orange">Privicy Policy</a>
         </div>
       </div>
     </div>
@@ -62,33 +65,84 @@
 
 
 <script>
-import Header from "../components/Header";
-
 export default {
   name: "App",
-  components: { Header },
+  components: {},
+  data: function () {
+    return {
+      mainProps: {
+        center: true,
+        src: require("@/assets/images/login-top.png"),
+      },
+    };
+  },
+  methods: {
+    getLoginTop() {
+      return this.mainProps.src;
+    },
+  },
 };
 </script>
 
-<style>
+<style scoped>
 #app {
   font-size: 12px;
 }
-.container button {
-  width: 100%;
-  font-size: 14px;
-  font-weight: bold;
-}
-
 .brand-icon {
   font-size: 20px;
   vertical-align: text-top;
 }
 
 .login-method-separator {
+  position: absolute;
+  top: 20px;
   text-align: center;
+  height: 2px;
+  border: 1px solid #6d6d6d;
+  position: absolute;
+  width: 100%;
+}
 
-  margin-top: 16px;
-  margin-bottom: 16px;
+input {
+  background: #c6c6c6;
+  color: #a5a4a4;
+  border-radius: 30px;
+  text-align: center;
+  font-weight: bold;
+  height: 30px;
+  width: 60%;
+}
+
+.txt-orange {
+  color: #fc5130;
+}
+
+.btn-login {
+  width: 120px;
+  position: absolute;
+  border-radius: 30px;
+  background: #fc5130;
+  border: 0;
+  transform: translate(-50%, 0);
+  left: 50%;
+  font-weight: bold;
+}
+
+.btn-brand {
+  background: #006989;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.txt-sign-up {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.txt-guest {
+  color: #6d6d6d;
+  font-weight: bold;
 }
 </style>

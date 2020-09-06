@@ -1,0 +1,8 @@
+#006989 - 鳥背景
+
+#c6c6c6 - yourname - 背景
+#a5a4a4 - font-color
+#fc5130 - Login
+#a5a4a4 - Login line 
+#6d6d6d - login 按鈕背後的橫線
+#6d6d6d - forget your passwork / browser as guest
